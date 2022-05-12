@@ -1,0 +1,29 @@
+{
+  "name": "ml-cypress-automation",
+  "version": "1.0.0",
+  "description": "MLTest",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run",
+    "cypress": "cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AnushkaVJ/Cypress_Automation_AVJ.git"
+  },
+  "keywords": [],
+  "author": "Anushka",
+  "license": "ISC",
+ 
+  
+  "devDependencies": {
+    "@percy/cli": "^1.1.0",
+    "@percy/cypress": "^3.1.1",
+    "cypress": "^9.5.4",
+    "cypress-xpath": "^1.6.2",
+    "mochawesome": "^7.1.3"
+  },
+  "dependencies": {
+    "@applitools/eyes-cypress": "^3.25.3"
+  }
+}

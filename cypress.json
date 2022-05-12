@@ -1,0 +1,7 @@
+{
+  "watchForFileChanges": false,
+  "reporter": "mochawesome",
+  "reporterOptions": {
+    "overwrite": false
+  }
+}
