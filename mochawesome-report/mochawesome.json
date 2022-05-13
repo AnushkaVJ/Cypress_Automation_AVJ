@@ -1,0 +1,197 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-05-13T00:32:03.322Z",
+    "end": "2022-05-13T00:32:59.314Z",
+    "duration": 55992,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "b7c21d01-2c60-445e-8fad-a59e9aec3517",
+      "title": "",
+      "fullFile": "cypress/integration/add-to-playout-single-track-by-search.spec.js",
+      "file": "cypress/integration/add-to-playout-single-track-by-search.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d20b0f83-a3e8-44e8-b9e8-b88a2beb1ae3",
+          "title": "Add to Playout Test Single Tarck in Search",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should Login",
+              "fullTitle": "Add to Playout Test Single Tarck in Search Should Login",
+              "timedOut": null,
+              "duration": 14531,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _main.login)('anushkaj@adelanka.com', 'Abc123!@#');",
+              "err": {},
+              "uuid": "aa48dfd6-682f-49be-a523-16946a5aa786",
+              "parentUUID": "d20b0f83-a3e8-44e8-b9e8-b88a2beb1ae3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Go to Search Tracks",
+              "fullTitle": "Add to Playout Test Single Tarck in Search Go to Search Tracks",
+              "timedOut": null,
+              "duration": 7687,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _mainPlayout.GotoSearchTracks)();",
+              "err": {},
+              "uuid": "927d4395-bf70-4521-b6ae-ae59cfb7f1ca",
+              "parentUUID": "d20b0f83-a3e8-44e8-b9e8-b88a2beb1ae3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Add to Playout by Search",
+              "fullTitle": "Add to Playout Test Single Tarck in Search Add to Playout by Search",
+              "timedOut": null,
+              "duration": 8835,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _mainPlayout.AddorPublishtoPlayout)(locators.InsideSearch3Dot, locators.SearchAddtoPlayout);",
+              "err": {},
+              "uuid": "a3528fd7-0c0f-4bfe-9a17-1bb0ba43a5b8",
+              "parentUUID": "d20b0f83-a3e8-44e8-b9e8-b88a2beb1ae3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Add to Playout by Search Assertion",
+              "fullTitle": "Add to Playout Test Single Tarck in Search Add to Playout by Search Assertion",
+              "timedOut": null,
+              "duration": 8631,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _mainPlayout.AddtoPlayoutAssertion)(locators.DHIDinSearch, locators.DHIDinPlayout);",
+              "err": {},
+              "uuid": "11e2e8f0-dea6-4321-8bc6-8dcb6d267528",
+              "parentUUID": "d20b0f83-a3e8-44e8-b9e8-b88a2beb1ae3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Remove Tracks In Playout",
+              "fullTitle": "Add to Playout Test Single Tarck in Search Remove Tracks In Playout",
+              "timedOut": null,
+              "duration": 6988,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _mainPlayout.RemoveTracksInPlayout)();",
+              "err": {},
+              "uuid": "b848c09b-3a88-4f19-97c0-cfa981ae2f9e",
+              "parentUUID": "d20b0f83-a3e8-44e8-b9e8-b88a2beb1ae3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should Signout",
+              "fullTitle": "Add to Playout Test Single Tarck in Search Should Signout",
+              "timedOut": null,
+              "duration": 6012,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _main.signout)();",
+              "err": {},
+              "uuid": "ce57ca80-da3c-4c79-af11-b6efc5d81db5",
+              "parentUUID": "d20b0f83-a3e8-44e8-b9e8-b88a2beb1ae3",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "aa48dfd6-682f-49be-a523-16946a5aa786",
+            "927d4395-bf70-4521-b6ae-ae59cfb7f1ca",
+            "a3528fd7-0c0f-4bfe-9a17-1bb0ba43a5b8",
+            "11e2e8f0-dea6-4321-8bc6-8dcb6d267528",
+            "b848c09b-3a88-4f19-97c0-cfa981ae2f9e",
+            "ce57ca80-da3c-4c79-af11-b6efc5d81db5"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 52684,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false
+      },
+      "version": "6.2.0"
+    }
+  }
+}
