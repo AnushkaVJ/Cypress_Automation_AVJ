@@ -27,7 +27,7 @@ beforeEach(() => {
   cy.viewport(1920, 1080)
 })
 
-describe('Add to Playout Toaster Message Validation', () => {
+describe('Add to Playout Toaster Messages Validation', () => {
   it('Should Login', () => {
     login('anushkaj@adelanka.com', 'Abc123!@#')
   })
@@ -100,9 +100,9 @@ describe('Add to Playout Toaster Message Validation', () => {
   it('Go To Playout And Select Created Playout Again', () => {
     GotoPlayoutAndSelectCreatedPlayout()
   })
-  it('Remove Tracks In Playout Again', () => {
-    RemoveTracksInPlayout()
-  })
+  // it('Remove Tracks In Playout Again', () => {
+  //   RemoveTracksInPlayout()
+  // })
   it('Should Signout', () => {
     signout()
   })
