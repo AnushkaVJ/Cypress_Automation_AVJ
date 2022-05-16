@@ -2,6 +2,8 @@
   "watchForFileChanges": false,
   "reporter": "mochawesome",
   "reporterOptions": {
-    "overwrite": true
+    "overwrite": false,
+    "charts": true,
+    "reportFilename": "[status]_[datetime]-[name]-report"
   }
 }
