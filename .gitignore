@@ -62,4 +62,4 @@ typings/
 
 cypress/videos
 mochawesome-report
-cypress/integration/screenshots
+cypress/screenshots
