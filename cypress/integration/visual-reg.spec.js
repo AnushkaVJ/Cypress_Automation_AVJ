@@ -9,7 +9,7 @@ import {
   before(() => {
     cy.viewport(1920, 1080)
     navigate()
-    cy.percySnapshot();
+    cy.percySnapshot('Login Page', { widths: [1920] });
   })
 
   beforeEach(() => {
@@ -21,7 +21,8 @@ import {
       login('anushkaj@adelanka.com', 'Abc123!@#')
     })
 
-    // it('Playlists Module', () => {
-    //   playlists()
-    // })
+    it('Playlists Module', () => {
+      playlists()
+      cy.percySnapshot('Playlist', { widths: [1920] });
+    })
 })

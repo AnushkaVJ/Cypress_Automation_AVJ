@@ -1,6 +1,7 @@
 {
   "watchForFileChanges": false,
   "reporter": "mochawesome",
+  "trashAssetsBeforeRuns": true,
   "reporterOptions": {
     "overwrite": false,
     "charts": true,

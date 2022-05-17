@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "cypress run",
-    "cypress": "cypress open"
+    "cypress": "cypress open",
+    "percy:cypress": "dotenv -- percy exec -- cypress run"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,7 @@
     "mochawesome": "^7.1.3"
   },
   "dependencies": {
-    "@applitools/eyes-cypress": "^3.25.3"
+    "@applitools/eyes-cypress": "^3.25.3",
+    "dotenv-cli": "^5.1.0"
   }
 }

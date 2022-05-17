@@ -13,7 +13,6 @@ import {
 var locators = require('../page-objects/locators.json');
 
 before(() => {
-  cy.viewport(1920, 1080)
   navigate()
 })
 
