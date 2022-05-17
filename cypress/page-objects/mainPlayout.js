@@ -244,7 +244,7 @@ export function PublishtoPlayoutAssertionMultiple(DHIDinMYPlaylist, DHIDinPlayou
       cy.xpath(CWRRadioStationSearch).click()
       cy.wait(1000)
       cy.xpath(PublishtoPlayoutRadioStationNext).click()
-      cy.wait(1000)
+      cy.wait(3000)
       cy.xpath(PublishtoPlayoutClassical).click()
       cy.wait(1000)
       cy.xpath(PublishtoPlayoutPublishButton).click()
