@@ -40,9 +40,9 @@ describe('Publish to Playout Classical-Contemporary Toggle Button Test', () => {
       locators.PlayoutTrackTypeinPublishWindow
     )
   })
-  // it('Should Signout', () => {
-  //   signout()
-  // })
+  it('Should Signout', () => {
+    signout()
+  })
 })
 
 
