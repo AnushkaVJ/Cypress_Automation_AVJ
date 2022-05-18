@@ -30,7 +30,7 @@
     "SearchTracks": "#musicsearchcontent > ul > a:nth-child(1)",
     "SearchModule": "#musicsearch",
     "SearchButton": "//*[@id='subHeader']/div/div/form/div/div[1]/div/div/div[2]/div/button[1]",
-    "InsideSearch3Dot": "//*[@id='567930f1-5120-435a-8151-180cfbc23358']/td[9]/button",
+    "InsideSearch3Dot": "//*[@id='mm-viewPort']/table/tbody/tr[1]/td[9]/button",
     "SearchTrackTitleSort": "//*[@id='mm-viewPort']/table/thead/tr/th[3]/span",
     "PlayoutTrackTitleSort": "//*[@id='mm-viewPort']/table/thead/tr/th[4]/span",
     "CWRRadioStationMultiple": "//*[contains(@class, 'MuiDialog-paperScrollPaper')]/div[2]/div/div/div[3]/div[5]/label/span/span/input",
@@ -66,5 +66,6 @@
     "PlayoutStatusClearButton": "#mm-viewPort > table > thead > tr > th:nth-child(7) > div > button:nth-child(3)",
     "HeaderUserButton": "//*[@id='root']/div/div/div/div/div/div[1]/div/div[1]/div/div[2]/div/div[2]/div[4]/button",
     "UserSignOut": "//*[contains(@class, 'MuiPaper-elevation16')]/div/div[2]/button",
+    "PlayoutTrackTypeinPublishWindow": "/html/body/div[7]/div[3]/div/div[2]/table/tbody/tr[1]/td[6]/label/span[2]",
     "PaginationTrackCount":"/html/body/div[1]/div/div/div/div/div/div[1]/div/div[2]/div/div/div[2]/div/div[2]/div[2]/div/div/div[2]/div"
 }

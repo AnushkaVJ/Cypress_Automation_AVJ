@@ -201,6 +201,36 @@ export function GotoPlayoutForPublish() {
   });
 }
 
+
+export function SelectRadioStationAndTestClassicalContemporaryToggle(CWRRadioStationSearch, PublishtoPlayoutRadioStationNext, PublishtoPlayoutClassical,PlayoutTrackTypeinPublishWindow) {
+  cy.xpath(CWRRadioStationSearch).click()
+  cy.wait(1000)
+  cy.xpath(PublishtoPlayoutRadioStationNext).click()
+  cy.wait(1000)
+  cy.xpath(PublishtoPlayoutClassical).click()
+  cy.wait(2000)
+
+  cy.xpath(PlayoutTrackTypeinPublishWindow, { timeout: 1000 }).invoke('text').then((PlayoutTrackType) => {
+    const PublishtoPlayoutTrackType = PlayoutTrackType;
+
+    if (expect(PublishtoPlayoutTrackType).to.eq('Classical')) {
+      cy.log('**Toggle button is ON = Publish to Playout Track Type is Classical**')
+    }
+  });
+
+  cy.wait(1000)
+  cy.xpath(PublishtoPlayoutClassical).click()
+  cy.wait(2000)
+
+  cy.xpath(PlayoutTrackTypeinPublishWindow, { timeout: 1000 }).invoke('text').then((PlayoutTrackType) => {
+    const PublishtoPlayoutTrackType = PlayoutTrackType;
+
+    if (expect(PublishtoPlayoutTrackType).to.eq("Contemporary")) {
+      cy.log('**Toggle button is OFF = Publish to Playout Track Type is Contemporary**')
+    }
+  });
+}
+
 export function PublishtoPlayoutAssertion(DHIDinMYPlaylist, DHIDinPlayout, CWRRadioStationSearch, PublishtoPlayoutRadioStationNext, PublishtoPlayoutClassical, PublishtoPlayoutPublishButton) {
   cy.xpath(DHIDinMYPlaylist, { timeout: 1000 }).invoke('text').then((myplaylistdhid1) => {
     const myplaylistdh1 = myplaylistdhid1;

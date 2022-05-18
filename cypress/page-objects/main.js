@@ -3,8 +3,8 @@ var locators = require('./locators.json');
 
 
 export function navigate() {
-  cy.visit('https://staging-bbcmusicbox.soundmouse.com/signin')
-  // cy.visit('https://soundmouse.net/admintools/ml-test/signin')
+  // cy.visit('https://staging-bbcmusicbox.soundmouse.com/signin')
+  cy.visit('https://soundmouse.net/admintools/ml-test/signin')
 }
 
 export function login(email, password) {
