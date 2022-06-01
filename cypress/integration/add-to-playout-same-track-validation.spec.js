@@ -12,6 +12,7 @@ import {
 } from '../page-objects/mainPlayout'
 
 var locators = require('../page-objects/locators.json');
+var cred = require('../page-objects/cred.json');
 
 before(() => {
   navigate()
@@ -23,7 +24,10 @@ beforeEach(() => {
 
 describe('Add to Playout Same Track Validation', () => {
   it('Should Login', () => {
-    login('anushkaj@adelanka.com', 'Abc123!@#')
+    login(
+      cred.Email,
+      cred.Password
+    )
   })
   it('Go to Search Tracks', () => {
     GotoSearchTracks()

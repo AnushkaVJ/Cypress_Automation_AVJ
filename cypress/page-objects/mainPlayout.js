@@ -84,7 +84,7 @@ export function ClickOnPlayoutStatusClearButton() {
 export function GotoPlayoutAndSelectCreatedPlayout() {
   GotoPlayout()
   cy.xpath(locators.CreatedPlayoutSession).click({ force: true })
-  cy.wait(2000)
+  cy.wait(2120)
 }
 export function MultipleTracksAddtoPlayoutAssertion(DHIDinsSearchorPlaylist, DHIDinPlayout) {
   cy.xpath(DHIDinsSearchorPlaylist, { timeout: 1000 }).invoke('text').then((myplaylistdhid1) => {
@@ -97,7 +97,7 @@ export function MultipleTracksAddtoPlayoutAssertion(DHIDinsSearchorPlaylist, DHI
 
       GotoPlayoutAndSelectCreatedPlayout()
 
-      PlayoutTrackTitleSort()
+      // PlayoutTrackTitleSort()
       cy.get(DHIDinPlayout, { timeout: 1000 }).invoke('text').then((playoutdhid1) => {
         const playoutdh1 = playoutdhid1;
 
@@ -164,7 +164,7 @@ export function RemoveTracksInPlayout() {
   cy.wait(1000)
   cy.get(locators.CreatedPlayoutSessionAction).click()
   cy.wait(1000)
-  cy.get(locators.CreatedPlayoutSessionActionRemove).click()
+  cy.xpath(locators.CreatedPlayoutSessionActionRemove).click()
   cy.wait(1000)
   cy.get(locators.CreatedPlayoutSessionActionRemoveYes).click()
 }
@@ -202,7 +202,7 @@ export function GotoPlayoutForPublish() {
 }
 
 
-export function SelectRadioStationAndTestClassicalContemporaryToggle(CWRRadioStationSearch, PublishtoPlayoutRadioStationNext, PublishtoPlayoutClassical,PlayoutTrackTypeinPublishWindow) {
+export function SelectRadioStationAndTestClassicalContemporaryToggle(CWRRadioStationSearch, PublishtoPlayoutRadioStationNext, PublishtoPlayoutClassical, PlayoutTrackTypeinPublishWindow) {
   cy.xpath(CWRRadioStationSearch).click()
   cy.wait(1000)
   cy.xpath(PublishtoPlayoutRadioStationNext).click()
@@ -396,12 +396,14 @@ export function VerifyTracksAddedToasterMessage() {
 
     cy.xpath(locators.PaginationTrackCount).invoke('text').then((text) => {
       if (text.includes('50')) {
-        expect(ToasterMessage).to.eq("50/50 Track(s) Added to Playout 1298")
+        // expect(ToasterMessage).to.eq("50/50 Track(s) Added to Playout 1298")
+        expect(ToasterMessage).to.be.oneOf(["50/50 Track(s) Added to Playout 1298", "Some tracks avoided due to 3hr duration restrictions. -1/50 Track(s) Added to Playout 1298"]);
         // cy.log('**50 Tracks Added to Playout Sucess**')
       }
       else {
         (text.includes('25'))
-        expect(ToasterMessage).to.eq("25/25 Track(s) Added to Playout 1298")
+        // expect(ToasterMessage).to.eq("25/25 Track(s) Added to Playout 1298")
+        expect(ToasterMessage).to.be.oneOf(["25/25 Track(s) Added to Playout 1298", "Some tracks avoided due to 3hr duration restrictions. 24/25 Track(s) Added to Playout 1298"]);
         // cy.log('**25 Tracks Added to Playout Sucess**')
       }
     })

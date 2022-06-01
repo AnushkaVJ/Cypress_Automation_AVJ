@@ -11,6 +11,7 @@ import {
 } from '../page-objects/mainPlayout'
 
 var locators = require('../page-objects/locators.json');
+var cred = require('../page-objects/cred.json');
 
 before(() => {
   navigate()
@@ -22,7 +23,10 @@ beforeEach(() => {
 
 describe('Add to Playout Test Single Tarck in Playlist', () => {
   it('Should Login', () => {
-    login('anushkaj@adelanka.com', 'Abc123!@#')
+    login(
+      cred.Email,
+      cred.Password
+    )
   })
   it('Go Inside MyPlaylist', () => {
     GoInsideMyPlaylist()

@@ -19,5 +19,17 @@ import '@applitools/eyes-cypress/commands'
 import './commands'
 import '@percy/cypress';
 
+
+
+
+
+import 'cypress-movie/commands'
+
+
+
+Cypress.Keyboard.defaults({
+    keystrokeDelay: 0,
+})
+
 // Alternatively you can use CommonJS syntax:
 // require('./commands')

@@ -5,15 +5,36 @@ var locators = require('./locators.json');
 export function navigate() {
   // cy.visit('https://staging-bbcmusicbox.soundmouse.com/signin')
   cy.visit('https://soundmouse.net/admintools/ml-test/signin')
+  cy.viewport(1920, 1080)
 }
 
 export function login(email, password) {
+  cy.toast('MusicBOX Login Page', {
+    duration: 3000,
+    blocking: false,
+  })
+  cy.get('input[id="email"]').arrow({
+    duration: 1500,
+    blocking: true,
+    pointAt: 'bottomLeft', // or "bottomRight"
+    offsetX: 0, // move the tip by X pixels
+    offsetY: 0, // move the tip by Y pixels
+    strokeWidth: 5 // SVG line width, pixels
+  })
+  cy.get('input[id="email"]').arrow({
+    text: 'Email here',
+    textSize: '5vh',
+  })
+  // cy.get('input[id="password"]').arrow({
+  //   text: 'Password here',
+  //   textSize: '10vh',
+  // })
   cy.wait(1000)
   cy.percySnapshot('login');
   cy.get('input[id="email"]').type(email + '{enter}')
   cy.get('input[id="password"').type(password)
   cy.xpath('/html/body/div/div/div/div[2]/div/form/button').click()
-  cy.wait(10000)
+  cy.wait(1000)
 }
 
 export function signout() {
