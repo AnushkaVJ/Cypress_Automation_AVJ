@@ -93,6 +93,7 @@
     "TrackEditTags":"//*[@id='simple-tab-1']",
     "TrackEditAlbumMetadata":"//*[@id='simple-tab-2']",
     "DatePicker":"/html/body/div[5]/div[3]/div/div[2]/div[2]/div/div[4]/div[4]/button",
+    "TRInsidePlayoutSession":"#mm-viewPort > table > tbody > tr:nth-child(1)",
 
     "Adaptor": "#adaptor",
     "AdminNotes": "#adminNotes",

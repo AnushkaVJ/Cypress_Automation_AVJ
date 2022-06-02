@@ -21,6 +21,7 @@ export function MultipleTracksSelectionInsidePlaylist() {
 
 export function MultipleTracksAddtoPlayout() {
   ///////////////////////////////=============================
+  cy.once('uncaught:exception', () => false);
   cy.get(locators.CreatedPlayoutSessionAction).click()
   cy.wait(2500)
   cy.xpath(locators.PlaylistAddtoPlayoutMultiple).click({ force: true })
@@ -157,17 +158,39 @@ export function MultipleTracksAddtoPlayoutAssertionForMultiTrackPlaylist(DHIDins
 
 
 
+// export function RemoveTracksInPlayout() {
+//   // GotoPlayoutAndSelectCreatedPlayout()
+  
+//   SelectResultPerPageinPagination(locators.Pagination, locators.Pagination200)
+//   cy.get(locators.CreatedPlayoutSessionCheckAll).click()
+//   cy.wait(1000)
+//   cy.get(locators.CreatedPlayoutSessionAction).click()
+//   cy.wait(1000)
+//   cy.xpath(locators.CreatedPlayoutSessionActionRemove).click()
+//   cy.wait(1000)
+//   cy.get(locators.CreatedPlayoutSessionActionRemoveYes).click()
+// }
+
+
 export function RemoveTracksInPlayout() {
   // GotoPlayoutAndSelectCreatedPlayout()
-  SelectResultPerPageinPagination(locators.Pagination, locators.Pagination200)
-  cy.get(locators.CreatedPlayoutSessionCheckAll).click()
-  cy.wait(1000)
-  cy.get(locators.CreatedPlayoutSessionAction).click()
-  cy.wait(1000)
-  cy.xpath(locators.CreatedPlayoutSessionActionRemove).click()
-  cy.wait(1000)
-  cy.get(locators.CreatedPlayoutSessionActionRemoveYes).click()
+  cy.get('body').then($body => {
+    if ($body.find(locators.TRInsidePlayoutSession).length) {
+      SelectResultPerPageinPagination(locators.Pagination, locators.Pagination200)
+      cy.get(locators.CreatedPlayoutSessionCheckAll).click()
+      cy.wait(1000)
+      cy.get(locators.CreatedPlayoutSessionAction).click()
+      cy.wait(1000)
+      cy.xpath(locators.CreatedPlayoutSessionActionRemove).click()
+      cy.wait(1000)
+      cy.get(locators.CreatedPlayoutSessionActionRemoveYes).click()
+    }else{
+      cy.log('**No Tracks to Remove**')
+    }
+  })
 }
+
+
 export function GotoSearchTracks() {
   cy.wait(1000)
   cy.get(locators.SearchModule).click({ force: true })

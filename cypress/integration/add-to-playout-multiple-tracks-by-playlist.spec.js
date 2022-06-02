@@ -9,7 +9,8 @@ import {
   GoInsideMyPlaylist,
   MultipleTracksAddtoPlayout,
   MultipleTracksAddtoPlayoutAssertionForMultiTrackPlaylist,
-  MultipleTracksSelectionInsidePlaylist
+  MultipleTracksSelectionInsidePlaylist,
+  GotoPlayoutAndSelectCreatedPlayout
 } from '../page-objects/mainPlayout'
 
 var locators = require('../page-objects/locators.json');
@@ -18,10 +19,10 @@ var cred = require('../page-objects/cred.json');
 before(() => {
   navigate()
 })
-
 beforeEach(() => {
   cy.viewport(1920, 1080)
 })
+
 
 describe('Add to Playout Test Multiple Tarck in Playlist', () => {
   it('Should Login', () => {
@@ -29,6 +30,13 @@ describe('Add to Playout Test Multiple Tarck in Playlist', () => {
       cred.Email,
       cred.Password
     )
+  })
+ 
+  it('Go to Playout And Select Created Playout', () => {
+    GotoPlayoutAndSelectCreatedPlayout()
+  })
+  it('Remove Tracks In Playout', () => {
+    RemoveTracksInPlayout()
   })
   it('Go Inside MyPlaylist', () => {
     GoInsideMyPlaylist()
@@ -48,7 +56,7 @@ describe('Add to Playout Test Multiple Tarck in Playlist', () => {
   it('Remove Tracks In Playout', () => {
     RemoveTracksInPlayout()
   })
-  it('Should Signout', () => {
-    signout()
-  })
+  // it('Should Signout', () => {
+  //   signout()
+  // })
 })
