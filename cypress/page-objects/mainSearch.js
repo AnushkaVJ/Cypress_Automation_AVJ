@@ -31,6 +31,11 @@ export function SelectSearchFieldFromUserPreferences(Field) {
   cy.wait(1500)
 }
 export function SelectFilterFromSearchField(Filter) {
+  cy.text('Select Exact Filter Option', {
+    duration: 5000, // how long the text should be there
+    blocking: false, // wait for the text to hide
+    textSize: '20pt', // CSS text height
+  })
   cy.xpath(locators.FilterButton).click()
   cy.wait(1000)
   cy.contains(Filter).click()
@@ -66,6 +71,11 @@ export function TypeValueandReceivedResultAssertion(SearchField, Searchvalue, Up
 
 export function OmitCharactersBeyond256inSearchValue(SearchField, Searchvalue, UploadN256Characters) {
   cy.xpath(SearchField).click({ force: true })
+  cy.text('Type the Given Search Value with more than 256 characters', {
+    duration: 5000, // how long the text should be there
+    blocking: false, // wait for the text to hide
+    textSize: '20pt', // CSS text height
+  })
   cy.xpath(SearchField).type(Searchvalue + '{enter}')
   // cy.xpath(SearchField).type(Searchvalue)
   // cy.wait(8000)
