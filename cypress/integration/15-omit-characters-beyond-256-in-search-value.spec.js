@@ -38,23 +38,18 @@ describe('Filter Values Conversion Into a Lowercase Form', () => {
       cred.Password
     )
   })
-  it('Go To Upload Session', () => {
-    GoToUploadSession()
-  })
-  it('Track Edit - Chnage Track Title with AND', () => {
-    TrackEditwithANDOR(
-      locators.Upload1stTrack3dot,
-      locators.UploadTrackEdit1,
-      data.UploadN256Characters
-    )
-  })
-  it('Track Edit - Chnage Track Title with OR', () => {
-    TrackEditwithANDOR(
-      locators.Upload2ndTrack3dot,
-      locators.UploadTrackEdit2,
-      data.UploadTrackTitleOR
-    )
-  })
+  // it('Go To Upload Session', () => {
+  //   GoToUploadSession(
+  //     locators.SelectedSession3
+  //   )
+  // })
+  // it('Track Edit - Add Values With 256 Characters', () => {
+  //   TrackEditwithANDOR(
+  //     locators.Upload1stTrack3dot,
+  //     locators.UploadTrackEdit1,
+  //     data.UploadN256Characters
+  //   )
+  // })
   it('Go To Advanced Search - Ashvin Track Search Config', () => {
     GoToAdvancedSearch()
   })

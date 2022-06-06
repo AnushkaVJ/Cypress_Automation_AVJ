@@ -30,7 +30,7 @@ export function MultipleTracksAddtoPlayout() {
 export function MultipleTracksPublishtoPlayout() {
   cy.get(locators.CreatedPlayoutSessionAction).click()
   cy.wait(3500)
-  cy.xpath(locators.MultipleTracksPublishtoPlayout).click({ force: true })
+  cy.contains(locators.MultipleTracksPublishtoPlayout).click({ force: true })
   cy.wait(2500)
 }
 
@@ -61,7 +61,6 @@ export function AddtoPlayoutAssertion(DHIDinMYPlaylist, DHIDinPlayout) {
 
 
 
-
 export function GotoPlayout() {
   cy.get(locators.Playout).click({ force: true })
 
@@ -74,7 +73,6 @@ export function GotoPlayout() {
     cy.wait(2000)
     cy.get(locators.PlayoutSearch).click({ force: true })
     cy.wait(1000)
-
   })
 }
 
@@ -160,7 +158,7 @@ export function MultipleTracksAddtoPlayoutAssertionForMultiTrackPlaylist(DHIDins
 
 // export function RemoveTracksInPlayout() {
 //   // GotoPlayoutAndSelectCreatedPlayout()
-  
+
 //   SelectResultPerPageinPagination(locators.Pagination, locators.Pagination200)
 //   cy.get(locators.CreatedPlayoutSessionCheckAll).click()
 //   cy.wait(1000)
@@ -184,7 +182,7 @@ export function RemoveTracksInPlayout() {
       cy.xpath(locators.CreatedPlayoutSessionActionRemove).click()
       cy.wait(1000)
       cy.get(locators.CreatedPlayoutSessionActionRemoveYes).click()
-    }else{
+    } else {
       cy.log('**No Tracks to Remove**')
     }
   })
@@ -202,6 +200,7 @@ export function GotoSearchTracks() {
 }
 
 export function AddorPublishtoPlayout(InsidePlaylist3dot, PlaylistAddorPublishtoPlayout) {
+  cy.wait(2000)
   cy.xpath(InsidePlaylist3dot).click()
   cy.wait(1000)
   cy.get(PlaylistAddorPublishtoPlayout).click()
@@ -209,7 +208,7 @@ export function AddorPublishtoPlayout(InsidePlaylist3dot, PlaylistAddorPublishto
 }
 
 export function GotoPlayoutForPublish() {
-  cy.get(locators.Playout).click()
+  cy.get(locators.Playout).click({ force: true})
   cy.wait(1000)
   cy.xpath(locators.PlayoutStatus, { timeout: 1000 }).invoke('text').then((playoutstatuscheck) => {
     const playoutstatus = playoutstatuscheck;
@@ -228,9 +227,9 @@ export function GotoPlayoutForPublish() {
 export function SelectRadioStationAndTestClassicalContemporaryToggle(CWRRadioStationSearch, PublishtoPlayoutRadioStationNext, PublishtoPlayoutClassical, PlayoutTrackTypeinPublishWindow) {
   cy.xpath(CWRRadioStationSearch).click()
   cy.wait(1000)
-  cy.xpath(PublishtoPlayoutRadioStationNext).click()
+  cy.contains(PublishtoPlayoutRadioStationNext).click()
   cy.wait(1000)
-  cy.xpath(PublishtoPlayoutClassical).click()
+  cy.xpath(PublishtoPlayoutClassical).click({ force: true })
   cy.wait(2000)
 
   cy.xpath(PlayoutTrackTypeinPublishWindow, { timeout: 1000 }).invoke('text').then((PlayoutTrackType) => {
@@ -260,11 +259,11 @@ export function PublishtoPlayoutAssertion(DHIDinMYPlaylist, DHIDinPlayout, CWRRa
 
     cy.xpath(CWRRadioStationSearch).click()
     cy.wait(1000)
-    cy.xpath(PublishtoPlayoutRadioStationNext).click()
+    cy.contains(PublishtoPlayoutRadioStationNext).click()
+    cy.wait(3000)
+    cy.xpath(PublishtoPlayoutClassical).click({ force: true})
     cy.wait(1000)
-    cy.xpath(PublishtoPlayoutClassical).click()
-    cy.wait(1000)
-    cy.xpath(PublishtoPlayoutPublishButton).click()
+    cy.xpath(PublishtoPlayoutPublishButton).click({ force: true})
 
     GotoPlayoutForPublish()
     cy.xpath(locators.PlayoutTrackType, { timeout: 1000 }).invoke('text').then((playouttracktype) => {
@@ -335,7 +334,7 @@ export function PublishButtonShouldEnableinCreatedStatus() {
   cy.xpath(locators.Playout3dot).click({ force: true })
   cy.wait(1000)
   if (cy.xpath(locators.PublishbyPlayout).not('have.class', 'Mui-disabled')) {
-    cy.log('**Publish Button is Enabled ==> Not have Mui-disabled Class**')
+    cy.log('**Publish Button is Enabled ==> Not Has Mui-disabled Class**')
   }
   cy.wait(1000)
 }
@@ -344,7 +343,7 @@ export function PublishButtonShouldNotEnable() {
   cy.xpath(locators.Playout3dot).click({ force: true })
   cy.wait(2000)
   if (cy.xpath(locators.PublishbyPlayout).should('have.class', 'Mui-disabled')) {
-    cy.log('**Publish Button is Disabled ==> Have Mui-disabled Class**')
+    cy.log('**Publish Button is Disabled ==> Has Mui-disabled Class**')
   }
   cy.wait(1000)
 }
@@ -366,19 +365,17 @@ export function ShouldNotEnableRemove() {
   cy.xpath(locators.InsidePlayout3dot).click({ force: true })
   cy.wait(1000)
   if (cy.xpath(locators.PlayOutTrackRemoveButtonInsideGrid).should('have.class', 'Mui-disabled')) {
-    cy.log('**Remove Button is Disabled in Single Track==> Have Mui-disabled Class**')
+    cy.log('**Remove Button is Disabled in Single Track==> Has Mui-disabled Class**')
   }
   cy.get(locators.CreatedPlayoutSessionCheckAll).click({ force: true })
   cy.wait(1000)
   cy.get(locators.CreatedPlayoutSessionAction).click({ force: true })
   cy.wait(1000)
   if (cy.xpath(locators.PlayOutTrackRemoveButton).should('have.class', 'Mui-disabled')) {
-    cy.log('**Remove Button is Disabled in Multiple Track==> Have Mui-disabled Class**')
+    cy.log('**Remove Button is Disabled in Multiple Track==> Has Mui-disabled Class**')
   }
   cy.wait(1000)
 }
-
-
 
 
 
@@ -419,15 +416,18 @@ export function VerifyTracksAddedToasterMessage() {
 
     cy.xpath(locators.PaginationTrackCount).invoke('text').then((text) => {
       if (text.includes('50')) {
-        // expect(ToasterMessage).to.eq("50/50 Track(s) Added to Playout 1298")
         expect(ToasterMessage).to.be.oneOf(["50/50 Track(s) Added to Playout 1298", "Some tracks avoided due to 3hr duration restrictions. -1/50 Track(s) Added to Playout 1298"]);
-        // cy.log('**50 Tracks Added to Playout Sucess**')
+        cy.log('**Toast Message Should Be One of Below**')
+        cy.log('50/50 Track(s) Added to Playout 1298')
+        cy.log('Some tracks avoided due to 3hr duration restrictions. -1/50 Track(s) Added to Playout 1298')
+
       }
       else {
         (text.includes('25'))
-        // expect(ToasterMessage).to.eq("25/25 Track(s) Added to Playout 1298")
         expect(ToasterMessage).to.be.oneOf(["25/25 Track(s) Added to Playout 1298", "Some tracks avoided due to 3hr duration restrictions. 24/25 Track(s) Added to Playout 1298"]);
-        // cy.log('**25 Tracks Added to Playout Sucess**')
+        cy.log('**Toast Message Should Be One of Below**')
+        cy.log('25/25 Track(s) Added to Playout 1298')
+        cy.log('Some tracks avoided due to 3hr duration restrictions. 24/25 Track(s) Added to Playout 1298')
       }
     })
   });
