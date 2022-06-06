@@ -1,23 +1,22 @@
 
 import LoginPages from "../page-objects/Login_page"
+import login from "../page-objects/main"
 import clearanceformcreate from "../page-objects/Clearance_form"
 import trackseach from "../page-objects/Track_seach"
 import clearanceWizard from "../page-objects/Clearance_Wizard"
 var locators = require('../page-objects/locators.json') 
+var cred = require('../page-objects/cred.json')
 
 describe('Clearance',function(){
     const CC = new clearanceformcreate();
     const Trksearch = new trackseach();
     const Cwizard = new clearanceWizard();
-    it('Login',function(){
-        const login = new LoginPages();
-        login.navigate();
-        login.useremail('rukshan@adelanka.com');
-        login.userPassword('Abc!@#123');
-        login.submit();
-        cy.wait(2000);
-        
-    })
+    it('Should Login', () => {
+        login(
+          cred.EmailT,
+          cred.PasswordT
+        )
+      })
     
     it('Access clearance forms page',function(){
         
