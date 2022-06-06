@@ -1,5 +1,7 @@
 {
   "watchForFileChanges": false,
+  "viewportWidth": 1920,
+  "viewportHeight": 1080,
   "reporter": "mochawesome",
   "trashAssetsBeforeRuns": true,
   "videoCompression": false,
