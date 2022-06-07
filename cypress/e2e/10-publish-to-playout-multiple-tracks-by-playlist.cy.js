@@ -17,9 +17,9 @@ before(() => {
   navigate()
 })
 
-beforeEach(() => {
-  cy.viewport(1920, 1080)
-})
+// beforeEach(() => {
+//   cy.viewport(1920, 1080)
+// })
 
 describe('Publish to Playout Test Multiple Tarcks in Playlist', () => {
   it('Should Login', () => {
@@ -46,9 +46,9 @@ describe('Publish to Playout Test Multiple Tarcks in Playlist', () => {
     )
   })
 
-  // it('Should Signout', () => {
-  //   signout()
-  // })
+  it('Should Signout', () => {
+    signout()
+  })
 })
 
 

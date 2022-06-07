@@ -46,9 +46,9 @@ describe('Publish to Playout Test Single Tarck in Search', () => {
       locators.PublishtoPlayoutPublishButtoninSearch
     )
   })
-  // it('Should Signout', () => {
-  //   signout()
-  // })
+  it('Should Signout', () => {
+    signout()
+  })
 })
 
 

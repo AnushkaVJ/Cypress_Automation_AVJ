@@ -20,7 +20,7 @@ beforeEach(() => {
   cy.viewport(1920, 1080)
 })
 
-describe('Publish to Playout Classical-Contemporary Toggle Button Test', () => {
+describe('11-Publish to Playout Classical-Contemporary Toggle Button Test', () => {
   it('Should Login', () => {
     login(
       cred.Email,

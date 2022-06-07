@@ -23,9 +23,9 @@ before(() => {
   navigate()
 })
 
-beforeEach(() => {
-  cy.viewport(1920, 1080)
-})
+// beforeEach(() => {
+//   cy.viewport(1920, 1080)
+// })
 
 describe('Add to Playout Toaster Messages Validation', () => {
   it('Should Login', () => {
@@ -110,12 +110,12 @@ describe('Add to Playout Toaster Messages Validation', () => {
   it('Go To Playout And Select Created Playout Again', () => {
     GotoPlayoutAndSelectCreatedPlayout()
   })
-  // it('Remove If Tracks are In The Playout Session Again', () => {
-  //   RemoveTracksInPlayout()
-  // })
-  // it('Should Signout', () => {
-  //   signout()
-  // })
+  it('Remove If Tracks are In The Playout Session Again', () => {
+    RemoveTracksInPlayout()
+  })
+  it('Should Signout', () => {
+    signout()
+  })
 })
 
 

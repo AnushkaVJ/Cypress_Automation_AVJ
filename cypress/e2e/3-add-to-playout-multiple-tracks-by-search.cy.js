@@ -20,9 +20,9 @@ before(() => {
   navigate()
 })
 
-beforeEach(() => {
-  cy.viewport(1920, 1080)
-})
+// beforeEach(() => {
+//   cy.viewport(1920, 1080)
+// })
 
 describe('Add to Playout Test-Multiple Tarck in Search', () => {
   it('Should Login', () => {

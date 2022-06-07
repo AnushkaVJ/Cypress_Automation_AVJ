@@ -39,9 +39,9 @@ export function login(email, password) {
 
 export function signout() {
   cy.wait(1000)
-  cy.xpath(locators.HeaderUserButton).click()
+  cy.xpath(locators.HeaderUserButton).click({ force: true})
   cy.wait(2000)
-  cy.xpath(locators.UserSignOut).click()
+  cy.xpath(locators.UserSignOut).click({ force: true})
   cy.wait(2000)
 }
 

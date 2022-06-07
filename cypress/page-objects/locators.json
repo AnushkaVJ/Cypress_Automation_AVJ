@@ -33,7 +33,7 @@
     "InsideSearch3Dot": "//*[@id='mm-viewPort']/table/tbody/tr[1]/td[9]/button",
     "SearchTrackTitleSort": "//*[@id='mm-viewPort']/table/thead/tr/th[3]/span",
     "PlayoutTrackTitleSort": "//*[@id='mm-viewPort']/table/thead/tr/th[4]/span",
-    "CWRRadioStationMultiple": "//*[contains(@class, 'MuiDialog-paperScrollPaper')]/div[2]/div/div/div[3]/div[5]/label/span/span/input",
+    "CWRRadioStationMultiple": "//input[contains(@value, 'CWR')]",
     "CWRRadioStation": "//input[contains(@value, 'CWR')]",
     "CWRRadioStationSearchinSearch": "//input[contains(@value, 'CWR')]",
     "PublishtoPlayoutRadioStationNext": "Next",

@@ -89,7 +89,7 @@ export function MultipleTracksAddtoPlayoutAssertion(DHIDinsSearchorPlaylist, DHI
   cy.xpath(DHIDinsSearchorPlaylist, { timeout: 1000 }).invoke('text').then((myplaylistdhid1) => {
     const myplaylistdh1 = myplaylistdhid1;
     cy.wait(2000)
-    cy.xpath(locators.Row2InsidePlaylist).click()
+    cy.xpath(locators.Row2InsidePlaylist).click({force: true})
     cy.wait(2000)
     cy.xpath(DHIDinsSearchorPlaylist, { timeout: 1000 }).invoke('text').then((myplaylistdhid2) => {
       const myplaylistdh2 = myplaylistdhid2;
@@ -260,7 +260,7 @@ export function PublishtoPlayoutAssertion(DHIDinMYPlaylist, DHIDinPlayout, CWRRa
     cy.xpath(CWRRadioStationSearch).click()
     cy.wait(1000)
     cy.contains(PublishtoPlayoutRadioStationNext).click()
-    cy.wait(3000)
+    cy.wait(5000)
     cy.xpath(PublishtoPlayoutClassical).click({ force: true})
     cy.wait(1000)
     cy.xpath(PublishtoPlayoutPublishButton).click({ force: true})
@@ -296,8 +296,8 @@ export function PublishtoPlayoutAssertionMultiple(DHIDinMYPlaylist, DHIDinPlayou
       cy.xpath(CWRRadioStationSearch).click()
       cy.wait(1000)
       cy.xpath(PublishtoPlayoutRadioStationNext).click()
-      cy.wait(3000)
-      cy.xpath(PublishtoPlayoutClassical).click()
+      cy.wait(5000)
+      cy.xpath(PublishtoPlayoutClassical).click({ force: true})
       cy.wait(1000)
       cy.xpath(PublishtoPlayoutPublishButton).click()
 
