@@ -9,10 +9,11 @@ class trackseach{
         cy.get('#fa596d83-a3ad-423a-b80e-556c6a8ce66d > td:nth-child(1) > span > span > input').check()
     }
     ClickTrack3dots(){
-        cy.xpath('//*[@id="7547a4c3-68b3-453c-8ed3-473e3da7094f"]/td[9]/button/span[1]').click()
+        cy.xpath('//*[contains(@class, "MuiTable-stickyHeader")]/tbody/tr[1]/td[9]/button').click()
+        //*[@id="ef7d4529-0940-48b5-874b-c2cd59964834"]/td[9]/button/span[1]
     }
     clickrunclearance(){
-        cy.get('body > div> div> ul > li:nth-child(9)').click()
+        cy.contains('Run Clearance').click()
     }
 }
 

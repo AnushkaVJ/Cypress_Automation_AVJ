@@ -16,13 +16,13 @@ class clearanceformcreate{
 
     GenreDropdown(){
         cy.xpath(locators.CF_GenreDropdown).click()
-        cy.get(path['CF_SelectChildren&Education_genre']).click()
+        cy.get(locators.CF_SelectChildrenandEducation_genre).click()
         
     }
 
     DeadlineDate(){
         cy.xpath(locators.CF_DeadlineDate).click()
-        cy.get(locators.CF_selectdeadline).click()
+        cy.xpath(locators.CF_selectdeadline).click()
 
     }
 

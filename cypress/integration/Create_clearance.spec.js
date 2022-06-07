@@ -1,11 +1,15 @@
 
 import LoginPages from "../page-objects/Login_page"
-import login from "../page-objects/main"
+import {login,navigate} from "../page-objects/main"
 import clearanceformcreate from "../page-objects/Clearance_form"
 import trackseach from "../page-objects/Track_seach"
 import clearanceWizard from "../page-objects/Clearance_Wizard"
 var locators = require('../page-objects/locators.json') 
 var cred = require('../page-objects/cred.json')
+
+before(() => {
+    navigate()
+  })
 
 describe('Clearance',function(){
     const CC = new clearanceformcreate();
@@ -25,7 +29,7 @@ describe('Clearance',function(){
         
     })
 
-    it('Verify Create Clearance Form',function (){
+    /*it('Verify Create Clearance Form',function (){
         CC.AddformButton();
         CC.PRODUCTIONNAMEInput('Automation 1');
         CC.GenreDropdown();
@@ -36,7 +40,7 @@ describe('Clearance',function(){
         cy.xpath(locators.formname).invoke('text').then((value)=>{
             const value1 = value;
             cy.log(value1)
-            expect(value1).to.eq('test manual ')
+            expect(value1).to.eq('Automation 1 ')
         })
 
     })
@@ -78,12 +82,13 @@ describe('Clearance',function(){
             const value7 = Notes_characterLimit;
             expect(value7).to.eq('Clearance form notes should be less than 500 characters.')
         })
-    })
+    })*/
 
     it('Verify Run Clearance from tracks',function(){
         Trksearch.Clicksearch();
         Trksearch.clicksearchbutton();
         //Trksearch.Checktrack();
+        cy.wait(2000);
         Trksearch.ClickTrack3dots();
         Trksearch.clickrunclearance();
         Cwizard.ProducrtionName('Automation 2');
