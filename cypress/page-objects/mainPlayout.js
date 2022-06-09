@@ -24,7 +24,7 @@ export function MultipleTracksAddtoPlayout() {
   cy.once('uncaught:exception', () => false);
   cy.get(locators.CreatedPlayoutSessionAction).click()
   cy.wait(2500)
-  cy.xpath(locators.PlaylistAddtoPlayoutMultiple).click({ force: true })
+  cy.contains(locators.PlaylistAddtoPlayoutMultiple).click({ force: true })
   cy.wait(1000)
 }
 export function MultipleTracksPublishtoPlayout() {
@@ -194,7 +194,15 @@ export function GotoSearchTracks() {
   cy.get(locators.SearchModule).click({ force: true })
   cy.wait(1000)
   cy.xpath(locators.SearchButton).click()
-  cy.wait(1000)
+  cy.wait(1120)
+  // cy.xpath(locators.ClearhButton).click()
+  // cy.wait(1151)
+  // cy.xpath(locators.SearchButton).click()
+  // cy.wait(1000)
+  // cy.xpath(locators.ClearhButton).click()
+  // cy.wait(1000)
+  // cy.xpath(locators.SearchButton).click()
+  // cy.wait(1000)
   cy.xpath(locators.SearchTrackTitleSort).click()
   cy.wait(2500)
 }
@@ -203,7 +211,7 @@ export function AddorPublishtoPlayout(InsidePlaylist3dot, PlaylistAddorPublishto
   cy.wait(2000)
   cy.xpath(InsidePlaylist3dot).click()
   cy.wait(1000)
-  cy.get(PlaylistAddorPublishtoPlayout).click()
+  cy.contains(PlaylistAddorPublishtoPlayout).click()
   cy.wait(1000)
 }
 
@@ -420,7 +428,6 @@ export function VerifyTracksAddedToasterMessage() {
         cy.log('**Toast Message Should Be One of Below**')
         cy.log('50/50 Track(s) Added to Playout 1298')
         cy.log('Some tracks avoided due to 3hr duration restrictions. -1/50 Track(s) Added to Playout 1298')
-
       }
       else {
         (text.includes('25'))

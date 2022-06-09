@@ -25,9 +25,9 @@ before(() => {
   navigate()
 })
 
-beforeEach(() => {
-  cy.viewport(1920, 1080)
-})
+// beforeEach(() => {
+//   cy.viewport(1920, 1080)
+// })
 
 
 
@@ -38,19 +38,19 @@ describe('Filter Values Conversion Into a Lowercase Form', () => {
       cred.Password
     )
   })
-  it('Go To Upload Session', () => {
-    GoToUploadSession(
-      locators.SelectedSession2
-    )
-  })
+  // it('Go To Upload Session', () => {
+  //   GoToUploadSession(
+  //     locators.SelectedSession2
+  //   )
+  // })
 
-  it('Track Edit - Chnage Field Values with OR', () => {
-    TrackEditwithANDOR(
-      locators.Upload1stTrack3dot,
-      locators.UploadTrackEdit1,
-      data.UploadTrackTitleOR
-    )
-  })
+  // it('Track Edit - Chnage Field Values with OR', () => {
+  //   TrackEditwithANDOR(
+  //     locators.Upload1stTrack3dot,
+  //     locators.UploadTrackEdit1,
+  //     data.UploadTrackTitleOR
+  //   )
+  // })
   it('Go To Advanced Search - Ashvin Track Search Config', () => {
     GoToAdvancedSearch()
   })
@@ -536,9 +536,9 @@ describe('Filter Values Conversion Into a Lowercase Form', () => {
 
 
 
-  it('Should Signout', () => {
-    signout()
-  })
+    // it('Should Signout', () => {
+  //   signout()
+  // })
 })
 
 

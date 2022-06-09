@@ -13,6 +13,15 @@ export function GoToUploadSession(SelectedSession) {
   cy.wait(1000)
   cy.xpath(locators.UploadsSession).click({ force: true })
   cy.wait(1000)
+  // cy.get('body').then($body => {
+  //   if ($body.find(SelectedSession).length) {
+  //     cy.contains(SelectedSession).click({ force: true })
+  //   } else {
+  //     cy.xpath(locators.Pagination2).click()
+  //     cy.wait(1500)
+  //     cy.contains(SelectedSession).click({ force: true })
+  //   }
+  // })
   cy.contains(SelectedSession).click({ force: true })
   cy.wait(1000)
 }
@@ -34,7 +43,7 @@ export function TrackEditwithANDOR(UploadTrack3dot, UploadTrackEdit1, UploadTrac
     cy.get(".MuiGrid-root").then($root => {
       if ($root.find(`#full-width-tab-0 > div > div > div > div > div:nth-child(2) > div:nth-child(${n}) > div > div > input`).length > 0) {
         cy.get(`#full-width-tab-0 > div > div > div > div > div:nth-child(2) > div:nth-child(${n}) > div > div > input`).then($foundelement => {
-          if ($foundelement.hasClass('MuiInputBase-input')) {
+          if ($foundelement.hasClass('MuiOutlinedInput-input')) {
             cy.get(`#full-width-tab-0 > div > div > div > div > div:nth-child(2) > div:nth-child(${n}) > div > div > input`).clear({ force: true })
             cy.get(`#full-width-tab-0 > div > div > div > div > div:nth-child(2) > div:nth-child(${n}) > div > div > input`).type(UploadTrackTitleAND)
           }
@@ -103,6 +112,7 @@ export function TrackEditwithANDOR(UploadTrack3dot, UploadTrackEdit1, UploadTrac
 
   cy.wait(1000)
   cy.xpath(locators.UploadEditSaveButton).click()
+  cy.wait(2000)
   cy.xpath(locators.UploadEditSaveConfirmation).click()
 }
 

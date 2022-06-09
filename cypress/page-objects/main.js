@@ -5,6 +5,8 @@ var locators = require('./locators.json');
 export function navigate() {
   // cy.visit('https://staging-bbcmusicbox.soundmouse.com/signin')
   cy.visit('https://soundmouse.net/admintools/ml-test/signin')
+  // cy.visit('https://skymusic.soundmouse.com/signin')
+  
   cy.viewport(1920, 1080)
 }
 
@@ -41,6 +43,7 @@ export function signout() {
   cy.wait(1000)
   cy.xpath(locators.HeaderUserButton).click({ force: true})
   cy.wait(2000)
+  cy.once('uncaught:exception', () => false);
   cy.xpath(locators.UserSignOut).click({ force: true})
   cy.wait(2000)
 }

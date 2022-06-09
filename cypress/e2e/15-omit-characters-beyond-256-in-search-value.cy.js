@@ -38,18 +38,19 @@ describe('Filter Values Conversion Into a Lowercase Form', () => {
       cred.Password
     )
   })
-  // it('Go To Upload Session', () => {
-  //   GoToUploadSession(
-  //     locators.SelectedSession3
-  //   )
-  // })
-  // it('Track Edit - Add Values With 256 Characters', () => {
-  //   TrackEditwithANDOR(
-  //     locators.Upload1stTrack3dot,
-  //     locators.UploadTrackEdit1,
-  //     data.UploadN256Characters
-  //   )
-  // })
+  it('Go To Upload Session', () => {
+    GoToUploadSession(
+      locators.SelectedSession3,
+      
+    )
+  })
+  it('Track Edit - Add Values With 256 Characters', () => {
+    TrackEditwithANDOR(
+      locators.Upload1stTrack3dot,
+      locators.UploadTrackEdit1,
+      data.UploadN256Characters
+    )
+  })
   it('Go To Advanced Search - Ashvin Track Search Config', () => {
     GoToAdvancedSearch()
   })
@@ -93,24 +94,24 @@ describe('Filter Values Conversion Into a Lowercase Form', () => {
   //   )
   // })
 
-  // ////////////////////////////////////////////////////////////////////////////
-  // it('Select AlternateTitle From User Preferences', () => {
-  //   SelectSearchFieldFromUserPreferences(
-  //     locators.AlternativeTitle
-  //   )
-  // })
-  // it('Select Exact Filter From Search Field', () => {
-  //   SelectFilterFromSearchField(
-  //     'Equal'
-  //   )
-  // })
-  // it('Type Value and Received Result Assertion', () => {
-  //   OmitCharactersBeyond256inSearchValue(
-  //     locators.CommonSearchField,
-  //     data.Search256Characters,
-  //     data.UploadN256Characters
-  //   )
-  // })
+  ////////////////////////////////////////////////////////////////////////////
+  it('Select AlternateTitle From User Preferences', () => {
+    SelectSearchFieldFromUserPreferences(
+      locators.AlternativeTitle
+    )
+  })
+  it('Select Exact Filter From Search Field', () => {
+    SelectFilterFromSearchField(
+      'Equal'
+    )
+  })
+  it('Type Value and Received Result Assertion', () => {
+    OmitCharactersBeyond256inSearchValue(
+      locators.CommonSearchField,
+      data.Search256Characters,
+      data.UploadN256Characters
+    )
+  })
 
   // //////////////////////////////////////////////////////////////////////////////
   // it('Select Arranger From User Preferences', () => {
@@ -564,33 +565,33 @@ describe('Filter Values Conversion Into a Lowercase Form', () => {
   //   )
   // })
 
-  //////////////////////////////////////////////////////////////////////////////
-  it('Select Translator From User Preferences', () => {
-    SelectSearchFieldFromUserPreferences(
-      locators.Translator
-    )
-  })
-  it('Select Exact Filter From Search Field', () => {
-    SelectFilterFromSearchField(
-      'Equal'
-    )
-  })
-  it('Type Value and Received Result Assertion', () => {
-    OmitCharactersBeyond256inSearchValue(
-      locators.CommonSearchField,
-      data.Search256Characters,
-      data.UploadN256Characters
-    )
-  })
+  // //////////////////////////////////////////////////////////////////////////////
+  // it('Select Translator From User Preferences', () => {
+  //   SelectSearchFieldFromUserPreferences(
+  //     locators.Translator
+  //   )
+  // })
+  // it('Select Exact Filter From Search Field', () => {
+  //   SelectFilterFromSearchField(
+  //     'Equal'
+  //   )
+  // })
+  // it('Type Value and Received Result Assertion', () => {
+  //   OmitCharactersBeyond256inSearchValue(
+  //     locators.CommonSearchField,
+  //     data.Search256Characters,
+  //     data.UploadN256Characters
+  //   )
+  // })
 
 
 
 
 
 
-  it('Should Signout', () => {
-    signout()
-  })
+  // it('Should Signout', () => {
+  //   signout()
+  // })
 })
 
 
