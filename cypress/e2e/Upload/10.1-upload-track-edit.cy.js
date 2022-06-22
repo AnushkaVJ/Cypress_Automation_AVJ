@@ -7,7 +7,11 @@ import {
 
 import {
   GoToUploadSession,
-  TrackEditwithANDOR
+  TrackEditwithANDOR,
+  SaveUploadEditTrack,
+  TrackEdit2,
+  TrackEditAssertion,
+  GoToTrackEditbyClickingOn3DOt
 } from '../page-objects/mainUpload'
 
 import {
@@ -25,10 +29,6 @@ before(() => {
   navigate()
 })
 
-// beforeEach(() => {
-//   cy.viewport(1920, 1080)
-// })
-
 describe('Upload Track Edit', () => {
   it('Should Login', () => {
     login(
@@ -40,18 +40,46 @@ describe('Upload Track Edit', () => {
   it('Go To Upload Session', () => {
     GoToUploadSession(
       locators.SelectedSession //Session 654 Session 5
-      )
+    )
   })
-  it('Track Edit - Chnage Track Title with AND', () => {
+
+  it('Track Edit - Chnage Track Details 1', () => {
     TrackEditwithANDOR(
       locators.Upload1stTrack3dot,
       locators.UploadTrackEdit1,
-      data.UploadTrackTitleAND
+      data.UploadTrackEditParameter
     )
   })
-  
 
-    // it('Should Signout', () => {
+  //dont uncomment/////////////
+  // it('Go To Track Edit by Clicking On 3 Dot Menu', () => {
+  //   GoToTrackEditbyClickingOn3DOt(
+  //     locators.Upload1stTrack3dot,
+  //     locators.UploadTrackEdit1
+  //   )
+  // })
+
+  it('Track Edit - Chnage Track Details 2', () => {
+    TrackEdit2(
+      locators.SelectOrigin,
+      locators.SelectSubOrigin,
+      locators.SelectRole,
+      data.UploadTrackEditParameter,
+      4,
+      4,
+      2022
+    )
+  })
+
+  it('Save Upload Edit Track', () => {
+    SaveUploadEditTrack()
+  })
+
+  it('Track Edit Value Assertion', () => {
+    TrackEditAssertion()
+  })
+
+  // it('Should Signout', () => {
   //   signout()
   // })
 })

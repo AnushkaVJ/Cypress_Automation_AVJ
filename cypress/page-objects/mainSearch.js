@@ -106,3 +106,8 @@ export function TestPreviousCheckBox() {
   })
   cy.get('[type="checkbox"]').uncheck({ force: true })
 }
+
+export function GoToSearch() {
+  cy.wait(1000)
+  cy.get(locators.SearchModule).click()
+}

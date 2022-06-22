@@ -7,7 +7,8 @@ import {
 
 import {
   GoToUploadSession,
-  TrackEditwithANDOR
+  TrackEditwithANDOR,
+  SaveUploadEditTrack
 } from '../page-objects/mainUpload'
 
 import {
@@ -41,7 +42,7 @@ describe('Filter Values Conversion Into a Lowercase Form', () => {
   it('Go To Upload Session', () => {
     GoToUploadSession(
       locators.SelectedSession3,
-      
+
     )
   })
   it('Track Edit - Add Values With 256 Characters', () => {
@@ -53,6 +54,9 @@ describe('Filter Values Conversion Into a Lowercase Form', () => {
   })
   it('Go To Advanced Search - Ashvin Track Search Config', () => {
     GoToAdvancedSearch()
+  })
+  it('Save Upload Edit Track', () => {
+    SaveUploadEditTrack()
   })
 
   //////////////////////////////////////////////////////////////////////////////

@@ -7,7 +7,8 @@ import {
 
 import {
   GoToUploadSession,
-  TrackEditwithANDOR
+  TrackEditwithANDOR,
+  SaveUploadEditTrack
 } from '../page-objects/mainUpload'
 
 import {
@@ -29,6 +30,8 @@ before(() => {
 //   cy.viewport(1920, 1080)
 // })
 
+
+
 describe('Filter Values Conversion Into a Lowercase Form', () => {
   it('Should Login', () => {
     login(
@@ -38,16 +41,21 @@ describe('Filter Values Conversion Into a Lowercase Form', () => {
   })
   // it('Go To Upload Session', () => {
   //   GoToUploadSession(
-  //     locators.SelectedSession //Session 654
-  //     )
+  //     locators.SelectedSession2
+  //   )
   // })
-  // it('Track Edit - Chnage Track Title with AND', () => {
+
+  // it('Track Edit - Chnage Field Values with OR', () => {
   //   TrackEditwithANDOR(
   //     locators.Upload1stTrack3dot,
   //     locators.UploadTrackEdit1,
-  //     data.UploadTrackTitleAND
+  //     data.UploadTrackTitleOR
   //   )
   // })
+  // it('Save Upload Edit Track', () => {
+  //   SaveUploadEditTrack()
+  // })
+  
   it('Go To Advanced Search - Ashvin Track Search Config', () => {
     GoToAdvancedSearch()
   })
@@ -61,8 +69,8 @@ describe('Filter Values Conversion Into a Lowercase Form', () => {
   it('Type Value and Received Result Assertion', () => {
     TypeValueandReceivedResultAssertion(
       locators.CommonSearchField,
-      data.SearchTrackTitleAND,
-      data.UploadTrackTitleAND
+      data.SearchTrackTitleOR,
+      data.UploadTrackTitleOR
     )
   })
 
@@ -75,8 +83,8 @@ describe('Filter Values Conversion Into a Lowercase Form', () => {
   it('Type Value and Received Result Assertion', () => {
     TypeValueandReceivedResultAssertion(
       locators.CommonSearchField,
-      data.SearchTrackTitleAND,
-      data.UploadTrackTitleAND
+      data.SearchTrackTitleOR,
+      data.UploadTrackTitleOR
     )
   })
 
@@ -89,8 +97,8 @@ describe('Filter Values Conversion Into a Lowercase Form', () => {
   it('Type Value and Received Result Assertion', () => {
     TypeValueandReceivedResultAssertion(
       locators.CommonSearchField,
-      data.SearchTrackTitleAND,
-      data.UploadTrackTitleAND
+      data.SearchTrackTitleOR,
+      data.UploadTrackTitleOR
     )
   })
 
@@ -103,8 +111,8 @@ describe('Filter Values Conversion Into a Lowercase Form', () => {
   it('Type Value and Received Result Assertion', () => {
     TypeValueandReceivedResultAssertion(
       locators.CommonSearchField,
-      data.SearchTrackTitleAND,
-      data.UploadTrackTitleAND
+      data.SearchTrackTitleOR,
+      data.UploadTrackTitleOR
     )
   })
 
@@ -117,8 +125,8 @@ describe('Filter Values Conversion Into a Lowercase Form', () => {
   it('Type Value and Received Result Assertion', () => {
     TypeValueandReceivedResultAssertion(
       locators.CommonSearchField,
-      data.SearchTrackTitleAND,
-      data.UploadTrackTitleAND
+      data.SearchTrackTitleOR,
+      data.UploadTrackTitleOR
     )
   })
 
@@ -131,8 +139,8 @@ describe('Filter Values Conversion Into a Lowercase Form', () => {
   it('Type Value and Received Result Assertion', () => {
     TypeValueandReceivedResultAssertion(
       locators.CommonSearchField,
-      data.SearchTrackTitleAND,
-      data.UploadTrackTitleAND
+      data.SearchTrackTitleOR,
+      data.UploadTrackTitleOR
     )
   })
 
@@ -145,8 +153,8 @@ describe('Filter Values Conversion Into a Lowercase Form', () => {
   it('Type Value and Received Result Assertion', () => {
     TypeValueandReceivedResultAssertion(
       locators.CommonSearchField,
-      data.SearchTrackTitleAND,
-      data.UploadTrackTitleAND
+      data.SearchTrackTitleOR,
+      data.UploadTrackTitleOR
     )
   })
 
@@ -159,8 +167,8 @@ describe('Filter Values Conversion Into a Lowercase Form', () => {
   it('Type Value and Received Result Assertion', () => {
     TypeValueandReceivedResultAssertion(
       locators.CommonSearchField,
-      data.SearchTrackTitleAND,
-      data.UploadTrackTitleAND
+      data.SearchTrackTitleOR,
+      data.UploadTrackTitleOR
     )
   })
 
@@ -173,8 +181,8 @@ describe('Filter Values Conversion Into a Lowercase Form', () => {
   it('Type Value and Received Result Assertion', () => {
     TypeValueandReceivedResultAssertion(
       locators.CommonSearchField,
-      data.SearchTrackTitleAND,
-      data.UploadTrackTitleAND
+      data.SearchTrackTitleOR,
+      data.UploadTrackTitleOR
     )
   })
 
@@ -187,8 +195,8 @@ describe('Filter Values Conversion Into a Lowercase Form', () => {
   it('Type Value and Received Result Assertion', () => {
     TypeValueandReceivedResultAssertion(
       locators.CommonSearchField,
-      data.SearchTrackTitleAND,
-      data.UploadTrackTitleAND
+      data.SearchTrackTitleOR,
+      data.UploadTrackTitleOR
     )
   })
 
@@ -201,8 +209,8 @@ describe('Filter Values Conversion Into a Lowercase Form', () => {
   it('Type Value and Received Result Assertion', () => {
     TypeValueandReceivedResultAssertion(
       locators.CommonSearchField,
-      data.SearchTrackTitleAND,
-      data.UploadTrackTitleAND
+      data.SearchTrackTitleOR,
+      data.UploadTrackTitleOR
     )
   })
 
@@ -215,8 +223,8 @@ describe('Filter Values Conversion Into a Lowercase Form', () => {
   it('Type Value and Received Result Assertion', () => {
     TypeValueandReceivedResultAssertion(
       locators.CommonSearchField,
-      data.SearchTrackTitleAND,
-      data.UploadTrackTitleAND
+      data.SearchTrackTitleOR,
+      data.UploadTrackTitleOR
     )
   })
 
@@ -229,8 +237,8 @@ describe('Filter Values Conversion Into a Lowercase Form', () => {
   it('Type Value and Received Result Assertion', () => {
     TypeValueandReceivedResultAssertion(
       locators.CommonSearchField,
-      data.SearchTrackTitleAND,
-      data.UploadTrackTitleAND
+      data.SearchTrackTitleOR,
+      data.UploadTrackTitleOR
     )
   })
 
@@ -243,8 +251,8 @@ describe('Filter Values Conversion Into a Lowercase Form', () => {
   it('Type Value and Received Result Assertion', () => {
     TypeValueandReceivedResultAssertion(
       locators.CommonSearchField,
-      data.SearchTrackTitleAND,
-      data.UploadTrackTitleAND
+      data.SearchTrackTitleOR,
+      data.UploadTrackTitleOR
     )
   })
 
@@ -257,8 +265,8 @@ describe('Filter Values Conversion Into a Lowercase Form', () => {
   it('Type Value and Received Result Assertion', () => {
     TypeValueandReceivedResultAssertion(
       locators.CommonSearchField,
-      data.SearchTrackTitleAND,
-      data.UploadTrackTitleAND
+      data.SearchTrackTitleOR,
+      data.UploadTrackTitleOR
     )
   })
 
@@ -271,8 +279,8 @@ describe('Filter Values Conversion Into a Lowercase Form', () => {
   it('Type Value and Received Result Assertion', () => {
     TypeValueandReceivedResultAssertion(
       locators.CommonSearchField,
-      data.SearchTrackTitleAND,
-      data.UploadTrackTitleAND
+      data.SearchTrackTitleOR,
+      data.UploadTrackTitleOR
     )
   })
 
@@ -285,8 +293,8 @@ describe('Filter Values Conversion Into a Lowercase Form', () => {
   it('Type Value and Received Result Assertion', () => {
     TypeValueandReceivedResultAssertion(
       locators.CommonSearchField,
-      data.SearchTrackTitleAND,
-      data.UploadTrackTitleAND
+      data.SearchTrackTitleOR,
+      data.UploadTrackTitleOR
     )
   })
 
@@ -299,8 +307,8 @@ describe('Filter Values Conversion Into a Lowercase Form', () => {
   it('Type Value and Received Result Assertion', () => {
     TypeValueandReceivedResultAssertion(
       locators.CommonSearchField,
-      data.SearchTrackTitleAND,
-      data.UploadTrackTitleAND
+      data.SearchTrackTitleOR,
+      data.UploadTrackTitleOR
     )
   })
 
@@ -313,8 +321,8 @@ describe('Filter Values Conversion Into a Lowercase Form', () => {
   it('Type Value and Received Result Assertion', () => {
     TypeValueandReceivedResultAssertion(
       locators.CommonSearchField,
-      data.SearchTrackTitleAND,
-      data.UploadTrackTitleAND
+      data.SearchTrackTitleOR,
+      data.UploadTrackTitleOR
     )
   })
 
@@ -327,8 +335,8 @@ describe('Filter Values Conversion Into a Lowercase Form', () => {
   it('Type Value and Received Result Assertion', () => {
     TypeValueandReceivedResultAssertion(
       locators.CommonSearchField,
-      data.SearchTrackTitleAND,
-      data.UploadTrackTitleAND
+      data.SearchTrackTitleOR,
+      data.UploadTrackTitleOR
     )
   })
 
@@ -341,8 +349,8 @@ describe('Filter Values Conversion Into a Lowercase Form', () => {
   it('Type Value and Received Result Assertion', () => {
     TypeValueandReceivedResultAssertion(
       locators.CommonSearchField,
-      data.SearchTrackTitleAND,
-      data.UploadTrackTitleAND
+      data.SearchTrackTitleOR,
+      data.UploadTrackTitleOR
     )
   })
 
@@ -355,8 +363,8 @@ describe('Filter Values Conversion Into a Lowercase Form', () => {
   it('Type Value and Received Result Assertion', () => {
     TypeValueandReceivedResultAssertion(
       locators.CommonSearchField,
-      data.SearchTrackTitleAND,
-      data.UploadTrackTitleAND
+      data.SearchTrackTitleOR,
+      data.UploadTrackTitleOR
     )
   })
 
@@ -369,8 +377,8 @@ describe('Filter Values Conversion Into a Lowercase Form', () => {
   it('Type Value and Received Result Assertion', () => {
     TypeValueandReceivedResultAssertion(
       locators.CommonSearchField,
-      data.SearchTrackTitleAND,
-      data.UploadTrackTitleAND
+      data.SearchTrackTitleOR,
+      data.UploadTrackTitleOR
     )
   })
 
@@ -383,8 +391,8 @@ describe('Filter Values Conversion Into a Lowercase Form', () => {
   it('Type Value and Received Result Assertion', () => {
     TypeValueandReceivedResultAssertion(
       locators.CommonSearchField,
-      data.SearchTrackTitleAND,
-      data.UploadTrackTitleAND
+      data.SearchTrackTitleOR,
+      data.UploadTrackTitleOR
     )
   })
 
@@ -397,8 +405,8 @@ describe('Filter Values Conversion Into a Lowercase Form', () => {
   it('Type Value and Received Result Assertion', () => {
     TypeValueandReceivedResultAssertion(
       locators.CommonSearchField,
-      data.SearchTrackTitleAND,
-      data.UploadTrackTitleAND
+      data.SearchTrackTitleOR,
+      data.UploadTrackTitleOR
     )
   })
 
@@ -411,8 +419,8 @@ describe('Filter Values Conversion Into a Lowercase Form', () => {
   it('Type Value and Received Result Assertion', () => {
     TypeValueandReceivedResultAssertion(
       locators.CommonSearchField,
-      data.SearchTrackTitleAND,
-      data.UploadTrackTitleAND
+      data.SearchTrackTitleOR,
+      data.UploadTrackTitleOR
     )
   })
 
@@ -425,8 +433,8 @@ describe('Filter Values Conversion Into a Lowercase Form', () => {
   it('Type Value and Received Result Assertion', () => {
     TypeValueandReceivedResultAssertion(
       locators.CommonSearchField,
-      data.SearchTrackTitleAND,
-      data.UploadTrackTitleAND
+      data.SearchTrackTitleOR,
+      data.UploadTrackTitleOR
     )
   })
 
@@ -439,8 +447,8 @@ describe('Filter Values Conversion Into a Lowercase Form', () => {
   it('Type Value and Received Result Assertion', () => {
     TypeValueandReceivedResultAssertion(
       locators.CommonSearchField,
-      data.SearchTrackTitleAND,
-      data.UploadTrackTitleAND
+      data.SearchTrackTitleOR,
+      data.UploadTrackTitleOR
     )
   })
 
@@ -453,8 +461,8 @@ describe('Filter Values Conversion Into a Lowercase Form', () => {
   it('Type Value and Received Result Assertion', () => {
     TypeValueandReceivedResultAssertion(
       locators.CommonSearchField,
-      data.SearchTrackTitleAND,
-      data.UploadTrackTitleAND
+      data.SearchTrackTitleOR,
+      data.UploadTrackTitleOR
     )
   })
 
@@ -467,8 +475,8 @@ describe('Filter Values Conversion Into a Lowercase Form', () => {
   it('Type Value and Received Result Assertion', () => {
     TypeValueandReceivedResultAssertion(
       locators.CommonSearchField,
-      data.SearchTrackTitleAND,
-      data.UploadTrackTitleAND
+      data.SearchTrackTitleOR,
+      data.UploadTrackTitleOR
     )
   })
 
@@ -481,8 +489,8 @@ describe('Filter Values Conversion Into a Lowercase Form', () => {
   it('Type Value and Received Result Assertion', () => {
     TypeValueandReceivedResultAssertion(
       locators.CommonSearchField,
-      data.SearchTrackTitleAND,
-      data.UploadTrackTitleAND
+      data.SearchTrackTitleOR,
+      data.UploadTrackTitleOR
     )
   })
 
@@ -495,8 +503,8 @@ describe('Filter Values Conversion Into a Lowercase Form', () => {
   it('Type Value and Received Result Assertion', () => {
     TypeValueandReceivedResultAssertion(
       locators.CommonSearchField,
-      data.SearchTrackTitleAND,
-      data.UploadTrackTitleAND
+      data.SearchTrackTitleOR,
+      data.UploadTrackTitleOR
     )
   })
 
@@ -509,8 +517,8 @@ describe('Filter Values Conversion Into a Lowercase Form', () => {
   it('Type Value and Received Result Assertion', () => {
     TypeValueandReceivedResultAssertion(
       locators.CommonSearchField,
-      data.SearchTrackTitleAND,
-      data.UploadTrackTitleAND
+      data.SearchTrackTitleOR,
+      data.UploadTrackTitleOR
     )
   })
 
@@ -523,8 +531,8 @@ describe('Filter Values Conversion Into a Lowercase Form', () => {
   it('Type Value and Received Result Assertion', () => {
     TypeValueandReceivedResultAssertion(
       locators.CommonSearchField,
-      data.SearchTrackTitleAND,
-      data.UploadTrackTitleAND
+      data.SearchTrackTitleOR,
+      data.UploadTrackTitleOR
     )
   })
 

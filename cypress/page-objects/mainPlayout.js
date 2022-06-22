@@ -5,7 +5,7 @@ var locators = require('./locators.json');
 //Playout
 export function GoInsideMyPlaylist() {
   cy.wait(4000)
-  cy.get(locators.MyPlaylists).click({ force: true })
+  cy.xpath(locators.MyPlaylists).click({ force: true })
   cy.wait(2000)
   cy.get(locators.InsidePlaylist).click({ force: true })
   cy.wait(2000)
