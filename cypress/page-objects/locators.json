@@ -70,7 +70,7 @@
     "PaginationTrackCount": "/html/body/div[1]/div/div/div/div/div/div[1]/div/div[2]/div/div/div[2]/div/div[2]/div[2]/div/div/div[2]/div",
     "Uploads": "#uploads",
     "UploadsSession": "//*[@id='uploadscontent']/ul/a[1]",
-    "SelectedSession": "Session 388",
+    "SelectedSession": "Session 684",
     "SelectedSession2": "Session 378",
     "SelectedSession3": "Session 374",
     "Upload1stTrack3dot": "//*[@id='mm-viewPort']/table/tbody/tr[1]/td[16]/button",
